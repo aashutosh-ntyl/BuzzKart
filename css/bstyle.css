@@ -1,0 +1,54 @@
+.hvr-normal{
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #F67777;
+   color: #fff;
+   padding: 0.5em 1em;
+   font-size:1em;
+}
+.hvr-normal:hover, .hvr-normal:focus, .hvr-normal:active {
+	color:#fff;
+	background:#FF6C6C;
+    text-decoration:none;
+  	  font-size: 1em;
+}
+.hvr-normal {
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+.hvr-normal:inactive {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #F67777;
+   color: #fff;
+   padding: 0.5em 1em;
+   font-size:1em;
+}
+.hvr-link{
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #F67777;
+   color: #fff;
+   padding: 0.5em 1em;
+   font-size:1em;
+}
+.hvr-link:hover, .hvr-link:focus, .hvr-link:active {
+	color:#fff;
+	background:#fff;
+    text-decoration:none;
+	font-size: 0.9em;
+}
+.hvr-link {
+    padding: 0.4em 1em;
+    font-size: 0.7em;
+}
+
+.hvr-link:inactive {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #F67777;
+   color: #fff;
+   padding: 0.5em 1em;
+   font-size:1em;
+}
