@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<?php 
-session_start();
-$_SESSION["username"]="guest";
-?>
 <html>
 <head>
 <title>BuzzKart - a Ecommerce Website</title>
@@ -29,7 +25,7 @@ $_SESSION["username"]="guest";
 			<div class="container">	
 			<div class="col-sm-5 col-md-offset-8 header-login">		
 					<ul >
-						<li><a><h4><b>welcome <?php echo $_SESSION["username"].","; ?></b></h4></a></li>
+						<li><a><h4><b>welcome Guest</b></h4></a></li>
 						<li><a href="login.php">Login</a></li>
 						<li><a href="register.php">Register</a></li>
 					</ul>
@@ -74,50 +70,7 @@ $_SESSION["username"]="guest";
 				<div class="content-mid">
 				<h3>Trending Items</h3>
 				<label class="line"></label>	
-<?php
-sql();
-function sql()
-{
-$con=mysql_connect("localhost","root","")or die("error");
-mysql_select_db("ecom");
-$sql = "SELECT * FROM product_info;";
-$result = mysql_query($sql) ;
-if($result==FALSE)
-{
-	die(mysql_error());
-}
-$i=1;
-while(($row = mysql_fetch_array($result))&&($i<=12))
-{
-$i=$i+1;
-echo						"<div class='col-md-3 item-grid simpleCart_shelfItem'>";
-echo						"<div class=' mid-pop'>";
-echo						"<div class='pro-img'>";
-echo						"<img src='".$row['product_clip']."' class='img-responsive' alt=''>";
-echo						"</div>";
-echo						"<div class='mid-1'>";
-echo						"<span>".$row['product_comp']."</span>";
-echo						"<h6><a>".$row['product_name']."</a></h6>";
-echo						"</div>";
-echo						"<div class='mid-2'>";
-echo						"<p ><em class='item_price'>Rs.".$row['product_cost']."</em></p>";
-echo						"<div class='block'>";									
-echo						"</div>";
-echo						"<div class='img item-add'>";
-echo						"<form method='post' action='single.php'>";
-echo						"<input type='hidden' value='".$row['product_id']."' name='product_id' />";
-echo						"<input type='submit' value='About/ADDtoCART' name='info'/>";
-echo						"</form>";
-echo						"</div>";
-echo						"<div class='clearfix'></div>";
-echo						"</div>";
-echo						"<div class='clearfix'></div>";
-echo						"</div>";
-echo						"</div>";
-}
-mysql_close();
-}
-?>
+
 <div class="clearfix"></div>
 </div>
 </div>
